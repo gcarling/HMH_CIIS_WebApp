@@ -1,9 +1,8 @@
+import { FormsModule } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { HMHService } from '../../airdata.service';
 
 // import { AirData } from '../../core/model';
-
-console.log('WAT ');
 
 @Component({
   selector: 'app-landingpage',
@@ -13,7 +12,9 @@ console.log('WAT ');
 export class LandingPageComponent implements OnInit {
 
   testMessage: any;
-  constructor(public service: HMHService) { console.log('constructor init!'); }
+  name: any;
+
+  constructor(public service: HMHService) { }
 
   ngOnInit() {
     console.log('init!');
@@ -21,5 +22,13 @@ export class LandingPageComponent implements OnInit {
       this.testMessage = value;
     });
     this.service.loadTest();
+  }
+
+  testChagne(test: any) {
+    console.log('test: ', test);
+  }
+
+  onSubmit(data: any) {
+    console.log('this.name: ', this.name);
   }
 }

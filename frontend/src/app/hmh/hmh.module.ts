@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { EffectsModule } from '@ngrx/effects';
 import { Routes, RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 // pages
 import { LandingPageComponent } from './pages/landingpage/landingpage.component';
 
@@ -32,6 +33,7 @@ const routes: Routes = [
       HMHEffects
     ]),
     RouterModule.forChild(routes),
+    FormsModule,
     MatCardModule
   ],
   declarations: [
