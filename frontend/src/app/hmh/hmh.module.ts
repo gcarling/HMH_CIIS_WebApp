@@ -20,7 +20,7 @@ export { HMHService }
 export { HMHState } from './reducers/hmh.state';
 export { hmhReducer } from './reducers/hmh.reducer';
 
-console.log('this is loading');
+
 const routes: Routes = [
   {path: 'home', component: LandingPageComponent}
 ];
@@ -41,4 +41,4 @@ const routes: Routes = [
     HMHService
     ]
 })
-export class AirDataModule { }
+export class HMHModule { }

@@ -16,7 +16,7 @@ import { CoreModule } from './core/core.module';
 
 import { StoreModule } from '@ngrx/store';
 
-import { AirDataModule } from './hmh/hmh.module';
+import { HMHModule } from './hmh/hmh.module';
 
 import { AppState, reducers } from './reducers';
 // import { HeaderComponent } from './airdata/components/header/header.component';
@@ -37,12 +37,12 @@ export { AppState };
     MatToolbarModule,
     MatCardModule,
     MatInputModule,
-    RouterModule.forRoot([{path: '', redirectTo: '/home', pathMatch: 'full'}]),
+    RouterModule.forRoot([{path: '', redirectTo: 'home', pathMatch: 'full'}]),
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25 // Retains last 25 states
     }),
-    AirDataModule,
+    HMHModule,
     CoreModule
   ],
   providers: [],

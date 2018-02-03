@@ -13,7 +13,7 @@ console.log('WAT ');
 export class LandingPageComponent implements OnInit {
 
   testMessage: any;
-  constructor(public service: HMHService) { console.log('init!'); }
+  constructor(public service: HMHService) { console.log('constructor init!'); }
 
   ngOnInit() {
     console.log('init!');
