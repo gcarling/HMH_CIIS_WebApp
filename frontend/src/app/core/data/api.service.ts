@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AirDataRepoService } from './airdata.repo.service';
+import { HMHRepoService } from './hmh.repo.service';
 
 @Injectable()
 export class APIService {
 
-  constructor(public airQualityData: AirDataRepoService) { }
+  constructor(public airQualityData: HMHRepoService) { }
 
 }

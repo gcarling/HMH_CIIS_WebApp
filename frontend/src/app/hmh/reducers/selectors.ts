@@ -5,8 +5,8 @@ import 'rxjs/add/operator/map';
 import { AppState } from '../../app.module';
 import { Selector } from '../../core/core.module';
 
-import { AirData } from '../../core/model';
+// import { AirData } from '../../core/model';
 
-export function getAirData(): Selector<AppState, AirData> {
+export function getAirData(): Selector<AppState, any> {
   return state$ => state$.map(state => state.airdata.testData).distinctUntilChanged();
 }

@@ -16,16 +16,16 @@ import { CoreModule } from './core/core.module';
 
 import { StoreModule } from '@ngrx/store';
 
-import { AirDataModule } from './airdata/airdata.module';
+import { AirDataModule } from './hmh/airdata.module';
 
 import { AppState, reducers } from './reducers';
-import { HeaderComponent } from './airdata/components/header/header.component';
+// import { HeaderComponent } from './airdata/components/header/header.component';
 export { AppState };
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    // HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ export { AppState };
     MatToolbarModule,
     MatCardModule,
     MatInputModule,
-    RouterModule.forRoot([{path: '', redirectTo: '/airqualitydata', pathMatch: 'full'}]),
+    RouterModule.forRoot([{path: '', redirectTo: '/home', pathMatch: 'full'}]),
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25 // Retains last 25 states

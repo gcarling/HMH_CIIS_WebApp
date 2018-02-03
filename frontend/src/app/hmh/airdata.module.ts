@@ -5,39 +5,39 @@ import { EffectsModule } from '@ngrx/effects';
 import { Routes, RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material';
 // pages
-import { AirQualityDataComponent } from './pages/airqualitypage.component'
+import { HMHComponent } from './pages/landingpage/landingpage.component'
 
 // components
 
 // state
-import * as airDataActions from './airdata.actions';
-import { AirDataEffects } from './airdata.effects';
+import * as airDataActions from './hmh.actions';
+import { HMHEffects } from './airdata.effects';
 
-import { AirDataService } from './airdata.service';
+import { HMHService } from './airdata.service';
 
 // exports
-export { AirDataService }
-export { AirDataState } from './reducers/airdata.state';
-export { airdataReducer } from './reducers/airdata.reducer';
+export { HMHService }
+export { HMHState } from './reducers/hmh.state';
+export { hmhReducer } from './reducers/hmh.reducer';
 
 const routes: Routes = [
-  {path: 'airqualitydata', component: AirQualityDataComponent}
+  {path: 'home', component: HMHComponent}
 ];
 
 @NgModule({
   imports: [
     CommonModule,
     EffectsModule.forRoot([
-      AirDataEffects
+      HMHEffects
     ]),
     RouterModule.forChild(routes),
     MatCardModule
   ],
   declarations: [
-    AirQualityDataComponent
+    HMHComponent
   ],
   providers: [
-    AirDataService
+    HMHService
     ]
 })
 export class AirDataModule { }

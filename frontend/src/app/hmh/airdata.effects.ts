@@ -12,32 +12,32 @@ import { AppState } from '../app.module';
 import { APIService } from '../core/core.module';
 
 
-import { AirData } from '../core/model';
+// import { AirData } from '../core/model';
 
 import {
-  AirDataActions,
-  AirDataActionTypes,
-  LoadAirData,
-  LoadAirDataComplete,
-  LoadAirDataError
- } from './airdata.actions';
+  HMHActionType,
+  LoadTest,
+  LoadTestComplete,
+  LoadTestError,
+ } from './hmh.actions';
 
  import * as AirDataActionMethods from './airdata.effects';
 
 @Injectable()
-export class AirDataEffects {
+export class HMHEffects {
 
   @Effect()
-  loadAirQualityData$: Observable<Action> = this.actions$
-    .ofType(AirDataActionTypes.LOAD_AIR_DATA)
+  loadTest$: Observable<Action> = this.actions$
+    .ofType(HMHActionType.TEST)
     .switchMap(action => {
 
       //const location = action.payload as string;
+        console.log('eoy bish');
         return this.api.airQualityData.testAPI('here')
         .map(airData =>
-          new LoadAirDataComplete(airData)
+          new LoadTestComplete(airData)
         )
-        .catch((error: any) => Observable.of(new LoadAirDataError(error)));
+        .catch((error: any) => Observable.of(new LoadTestError(error)));
     });
 
   constructor(

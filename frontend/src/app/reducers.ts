@@ -12,7 +12,7 @@ import { storeFreeze } from "ngrx-store-freeze";
  */
 import { combineReducers } from '@ngrx/store';
 
-import { AirDataState, airdataReducer } from './airdata/airdata.module';
+import { HMHState, hmhReducer } from './hmh/airdata.module';
 
 import { environment } from '../environments/environment';
 /**
@@ -21,14 +21,14 @@ import { environment } from '../environments/environment';
  * the state of the reducer plus any selector functions. The `* as`
  * notation packages up all of the exports into a single object.
  */
-import * as airData from './airdata/reducers/airdata.reducer';
+import * as airData from './hmh/reducers/hmh.reducer';
 
 export interface AppState {
-    airdata: AirDataState;
+    airdata: HMHState;
 }
 
 export const reducers = {
-    airdata: airdataReducer
+    airdata: hmhReducer
 }
 
 const developmentReducer: ActionReducer<AppState> = compose(storeFreeze, combineReducers)(reducers);

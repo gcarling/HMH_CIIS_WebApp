@@ -4,24 +4,20 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { AirData } from '../model/index';
+// import { AirData } from '../model/index';
 
 @Injectable()
-export class AirDataRepoService {
+export class HMHRepoService {
 
   private readonly apiURL = 'http://api.waqi.info/feed/';
   private readonly authID = 'bdd646cdbd22e7ddccff5239c83e47a3d7737420';
 
-  private serviceUrls = {
-    byName: (name) => this.apiURL + name + '/?token=' +this.authID,
-  };
-
   constructor(private http: Http) { }
 
-  testAPI(location): Observable<AirData> {
-    return this.http.get(this.serviceUrls.byName(location))
-                    .map(this.transformData)
-                    .catch(this.handleError);
+  testAPI(location): Observable<any> {
+    return this.http.get('testo').map(data => {
+      console.log(data);
+    });
   }
 
   private transformData = (response: any) => {

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { APIService } from './api.service';
-import { AirDataRepoService } from './airdata.repo.service';
+import { HMHRepoService } from './hmh.repo.service';
 
 @NgModule({
   imports: [ HttpModule ],
@@ -10,7 +10,7 @@ import { AirDataRepoService } from './airdata.repo.service';
   declarations: [],
   providers: [
     APIService,
-    AirDataRepoService
+    HMHRepoService
   ],
 })
 export class APIModule { }
