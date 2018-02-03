@@ -32,7 +32,7 @@ export class HMHEffects {
     .switchMap(action => {
 
       //const location = action.payload as string;
-        console.log('eoy bish');
+        console.log('eyo bish');
         return this.api.airQualityData.testAPI('here')
         .map(airData =>
           new LoadTestComplete(airData)

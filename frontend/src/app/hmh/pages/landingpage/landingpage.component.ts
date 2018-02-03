@@ -3,15 +3,17 @@ import { HMHService } from '../../airdata.service';
 
 // import { AirData } from '../../core/model';
 
+console.log('WAT ');
+
 @Component({
   selector: 'app-landingpage',
   templateUrl: './landingpage.component.html',
   styleUrls: ['./landingpage.component.scss']
 })
-export class HMHComponent implements OnInit {
+export class LandingPageComponent implements OnInit {
 
   testMessage: any;
-  constructor(public service: HMHService) { }
+  constructor(public service: HMHService) { console.log('init!'); }
 
   ngOnInit() {
     console.log('init!');

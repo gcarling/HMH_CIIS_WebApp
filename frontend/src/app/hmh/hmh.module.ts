@@ -5,7 +5,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { Routes, RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material';
 // pages
-import { HMHComponent } from './pages/landingpage/landingpage.component'
+import { LandingPageComponent } from './pages/landingpage/landingpage.component';
 
 // components
 
@@ -20,8 +20,9 @@ export { HMHService }
 export { HMHState } from './reducers/hmh.state';
 export { hmhReducer } from './reducers/hmh.reducer';
 
+console.log('this is loading');
 const routes: Routes = [
-  {path: 'home', component: HMHComponent}
+  {path: 'home', component: LandingPageComponent}
 ];
 
 @NgModule({
@@ -34,7 +35,7 @@ const routes: Routes = [
     MatCardModule
   ],
   declarations: [
-    HMHComponent
+    LandingPageComponent
   ],
   providers: [
     HMHService

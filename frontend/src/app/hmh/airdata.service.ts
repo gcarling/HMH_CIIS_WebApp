@@ -6,7 +6,7 @@ import { List } from 'immutable';
 // import { AirData } from '../core/model'
 import { AppState } from '../app.module';
 
-import * as AirDataActions from './hmh.actions';
+import * as HMHActions from './hmh.actions';
 
 import {
   getAirData
@@ -21,6 +21,6 @@ export class HMHService {
     }
 
     loadTest() {
-      this.store$.dispatch(new AirDataActions.LoadTest());
+      this.store$.dispatch(new HMHActions.LoadTest());
     }
 }

@@ -12,7 +12,7 @@ import { storeFreeze } from "ngrx-store-freeze";
  */
 import { combineReducers } from '@ngrx/store';
 
-import { HMHState, hmhReducer } from './hmh/airdata.module';
+import { HMHState, hmhReducer } from './hmh/hmh.module';
 
 import { environment } from '../environments/environment';
 /**
