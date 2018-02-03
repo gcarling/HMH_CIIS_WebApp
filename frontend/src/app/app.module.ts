@@ -19,7 +19,7 @@ import { StoreModule } from '@ngrx/store';
 import { AirDataModule } from './airdata/airdata.module';
 
 import { AppState, reducers } from './reducers';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './airdata/components/header/header.component';
 export { AppState };
 
 @NgModule({

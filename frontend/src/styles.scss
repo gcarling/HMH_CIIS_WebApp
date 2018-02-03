@@ -7,20 +7,6 @@ $header-color-primary: #f6f1ed;
 
 
 body {
-  background-color: $background-color-primary;
-  font-family: 'Lato', sans-serif;
-  margin: 0px;
-}
-
-mat-card {
-  background-color: $mat-card-primary;
-}
-
-h1 {
-  text-align: center;
-  color: $header-color-primary;
-}
-
-.header {
-  color: $header-primary;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
 }
