@@ -17,9 +17,9 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit() {
     console.log('init!');
-    // this.service.airData$.subscribe((value) => {
-    //   this.testMessage = value;
-    // });
+    this.service.testData$.subscribe((value) => {
+      this.testMessage = value;
+    });
     this.service.loadTest();
   }
 }

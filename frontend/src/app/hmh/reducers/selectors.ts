@@ -7,6 +7,6 @@ import { Selector } from '../../core/core.module';
 
 // import { AirData } from '../../core/model';
 
-export function getAirData(): Selector<AppState, any> {
+export function getTestData(): Selector<AppState, any> {
   return state$ => state$.map(state => state.airdata.testData).distinctUntilChanged();
 }

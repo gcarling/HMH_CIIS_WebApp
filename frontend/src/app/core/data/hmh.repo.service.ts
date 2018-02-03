@@ -15,8 +15,9 @@ export class HMHRepoService {
   constructor(private http: Http) { }
 
   testAPI(location): Observable<any> {
-    return this.http.get('testo').map(data => {
-      console.log(data);
+    return this.http.get('http://localhost:8080/testo').map(data => {
+      console.log('data: ', data);
+      return this.transformData(data);
     });
   }
 
@@ -24,6 +25,7 @@ export class HMHRepoService {
       if (response.status < 200 || response.status >= 300) {
         throw new Error('Response status: ' + response.status);
       }
+      console.log('response._body: ', response._body);
       const body = response.json();
       return body || { };
   }

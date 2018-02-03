@@ -32,9 +32,10 @@ export class HMHEffects {
     .switchMap(action => {
 
       //const location = action.payload as string;
-        console.log('eyo bish');
         return this.api.airQualityData.testAPI('here')
         .map(airData =>
+          console.log('jklasdljkklfjsd') ||
+          console.log(airData) ||
           new LoadTestComplete(airData)
         )
         .catch((error: any) => Observable.of(new LoadTestError(error)));
@@ -45,5 +46,4 @@ export class HMHEffects {
     private api: APIService,
     private store$: Store<AppState>
   ) { }
-
 }

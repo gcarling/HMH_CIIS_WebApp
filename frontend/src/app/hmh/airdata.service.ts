@@ -9,15 +9,15 @@ import { AppState } from '../app.module';
 import * as HMHActions from './hmh.actions';
 
 import {
-  getAirData
+  getTestData
 } from './reducers/selectors';
 
 @Injectable()
 export class HMHService {
-    airData$: Observable<any>;
+    testData$: Observable<any>;
 
     constructor(private store$: Store<AppState>) {
-        this.airData$ = store$.let(getAirData());
+        this.testData$ = store$.let(getTestData());
     }
 
     loadTest() {
