@@ -5,7 +5,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   console.log('eeyyy lmao');
-  res.send('OK');
+  res.send('poop123123');
 });
 
 module.exports = app;
