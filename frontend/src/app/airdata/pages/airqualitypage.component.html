@@ -1,0 +1,10 @@
+
+<div class="outer-card">
+<mat-card>
+  <mat-card-title>
+      <h1>Location: {{testMessage?.data?.city.name}}</h1>
+      <div class="aqi-box" *ngIf="testMessage.data.aqi"><mat-card [ngStyle]="{'background-color': testMessage.data.aqi > '100' ? '#96281B' : testMessage.data.aqi > '49' ? '#D35400' : '#1E824C'}"> {{testMessage?.data?.aqi}} </mat-card></div>
+  </mat-card-title>
+</mat-card>
+</div>
+

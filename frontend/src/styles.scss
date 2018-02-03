@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+$background-color-primary: #16174f;
+$header-primary: #667467;
+$mat-card-primary: #963019;
+$header-color-primary: #f6f1ed;
+
+
+body {
+  background-color: $background-color-primary;
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+}
+
+mat-card {
+  background-color: $mat-card-primary;
+}
+
+h1 {
+  text-align: center;
+  color: $header-color-primary;
+}
+
+.header {
+  color: $header-primary;
+}
