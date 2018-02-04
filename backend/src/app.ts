@@ -1,4 +1,5 @@
 import * as express from "express";
+const bp = require('body-parser');
 
 // Create Express server
 const app = express();
@@ -32,6 +33,7 @@ let getUser = function (id, callback) {
     }));
 };
 
+app.use(bp.json());
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -65,6 +67,7 @@ app.get('/user/:id', (req, res) => {
 });
 
 app.post('/user', (req, res) => {
+    console.log('req: ', req);
     console.log('adding initial user');
     createUser(req.body['user'], function(result) {
         res.send('ronnie added!')
