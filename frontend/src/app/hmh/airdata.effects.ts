@@ -41,6 +41,15 @@ export class HMHEffects {
         .catch((error: any) => Observable.of(new LoadTestError(error)));
     });
 
+  @Effect()
+  createUser$: Observable<Action> = this.actions$
+    .ofType(HMHActionType.CREATE_USER)
+    .switchMap(action => {
+
+      //const location = action.payload as string;
+        return this.api.airQualityData.createUser(action.payload);
+    });
+
   constructor(
     private actions$: Actions,
     private api: APIService,

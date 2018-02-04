@@ -6,6 +6,7 @@ export enum HMHActionType {
   TEST_COMPLETE = 'TEST_COMPLETE',
   TEST_ERROR = 'TEST_ERROR',
   SET_FORM_PROP = 'SET_FORM_PROP',
+  CREATE_USER = 'CREATE_USER',
 }
 
     /**
@@ -20,6 +21,11 @@ export enum HMHActionType {
 
   export class SetFormProp implements Action {
     readonly type = HMHActionType.SET_FORM_PROP;
+    constructor(public payload: any) {};
+  }
+
+  export class CreateUser implements Action {
+    readonly type = HMHActionType.CREATE_USER;
     constructor(public payload: any) {};
   }
 

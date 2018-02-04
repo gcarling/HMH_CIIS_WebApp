@@ -29,4 +29,8 @@ export class HMHService {
     setProp(payload) {
       this.store$.dispatch(new HMHActions.SetFormProp(payload));
     }
+
+    createUser(user) {
+      this.store$.dispatch(new HMHActions.CreateUser(user));
+    }
 }

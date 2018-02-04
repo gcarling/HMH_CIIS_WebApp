@@ -21,6 +21,12 @@ export class HMHRepoService {
     });
   }
 
+  createUser(user): Observable<any> {
+    return this.http.post('http://localhost:8080/user', user).map(data => {
+      console.log('user res data: ', data);
+    });
+  }
+
   private transformData = (response: any) => {
       if (response.status < 200 || response.status >= 300) {
         throw new Error('Response status: ' + response.status);
