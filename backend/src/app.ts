@@ -9,9 +9,14 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', (req, res) => {
-  console.log('eeyyy lmao');
-  res.send('poop123123');
+app.get('/user', (req, res) => {
+  console.log('eeyyy lmaooooooooooooooo');
+  res.send( {
+    firstname: 'Lizzie',
+    lastname: 'Matusov',
+    phoneNumber: 8055586137,
+    issues: [ 'Anxiety', 'Bi-Polar Disorder', 'Depression'],
+  });
 });
 
 app.get('/testo', (req, res) => {
