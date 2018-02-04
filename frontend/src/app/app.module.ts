@@ -19,13 +19,13 @@ import { StoreModule } from '@ngrx/store';
 import { HMHModule } from './hmh/hmh.module';
 
 import { AppState, reducers } from './reducers';
-// import { HeaderComponent } from './airdata/components/header/header.component';
+// import { DankTextInput } from './hmh/components/dankTextInput/dankTextInput.component';
 export { AppState };
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HeaderComponent,
+    // DankTextInput,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { LandingPageComponent } from './pages/landingpage/landingpage.component';
 
 // components
+import { DankTextInput } from './components/dankTextInput/dankTextInput.component';
 
 // state
 import * as airDataActions from './hmh.actions';
@@ -37,7 +38,8 @@ const routes: Routes = [
     MatCardModule
   ],
   declarations: [
-    LandingPageComponent
+    LandingPageComponent,
+    DankTextInput
   ],
   providers: [
     HMHService
