@@ -22,7 +22,7 @@ export class HMHRepoService {
   }
 
   createUser(user): Observable<any> {
-    return this.http.post('http://localhost:8080/user', user).map(data => {
+    return this.http.post('http://localhost:8080/user', { user }).map(data => {
       console.log('user res data: ', data);
     });
   }
