@@ -30,5 +30,6 @@ export class LandingPageComponent implements OnInit {
 
   onSubmit(data: any) {
     console.log('this.formData: ', this.formData);
+    this.service.createUser(this.formData);
   }
 }
