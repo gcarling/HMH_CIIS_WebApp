@@ -15,7 +15,10 @@ export function hmhReducer(state: HMHState = initialState, action: any): HMHStat
     case HMHActionType.SET_FORM_PROP:
       return {
         ...state,
-        ...action.payload,
+        formData: {
+          ...(state.formData || {}),
+          ...action.payload
+        },
       };
 
     default:

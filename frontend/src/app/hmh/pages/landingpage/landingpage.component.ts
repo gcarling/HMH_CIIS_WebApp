@@ -12,6 +12,7 @@ import { HMHService } from '../../airdata.service';
 export class LandingPageComponent implements OnInit {
 
   testMessage: any;
+  formData: any;
   name: any;
 
   constructor(public service: HMHService) { }
@@ -21,14 +22,13 @@ export class LandingPageComponent implements OnInit {
     this.service.testData$.subscribe((value) => {
       this.testMessage = value;
     });
+    this.service.formData$.subscribe((data) => {
+      this.formData = data;
+    });
     this.service.loadTest();
   }
 
-  testChagne(test: any) {
-    console.log('test: ', test);
-  }
-
   onSubmit(data: any) {
-    console.log('this.name: ', this.name);
+    console.log('this.formData: ', this.formData);
   }
 }

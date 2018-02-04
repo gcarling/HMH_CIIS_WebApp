@@ -10,3 +10,7 @@ import { Selector } from '../../core/core.module';
 export function getTestData(): Selector<AppState, any> {
   return state$ => state$.map(state => state.airdata.testData).distinctUntilChanged();
 }
+
+export function getFormData(): Selector<AppState, any> {
+  return state$ => state$.map(state => state.airdata.formData).distinctUntilChanged();
+}

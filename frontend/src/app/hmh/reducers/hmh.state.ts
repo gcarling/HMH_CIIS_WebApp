@@ -3,6 +3,7 @@ import { Map, List, Record } from 'immutable';
 
 export interface HMHState extends Map<string, any> {
     testData: any;
+    formData: any;
 }
 
 export const AirDataRecord = Record({
