@@ -6,7 +6,7 @@ import { HMHService } from '../../airdata.service';
 
 @Component({
   selector: 'dank-text-input',
-  templateUrl: './danktextinput.component.html',
+  templateUrl: './dankTextInput.component.html',
   styleUrls: ['./danktextinput.component.scss']
 })
 export class DankTextInput implements OnInit {
@@ -15,16 +15,15 @@ export class DankTextInput implements OnInit {
 
   textValue: string;
 
-  constructor() { }
+  constructor(public service: HMHService) { }
 
   ngOnInit() {
   }
 
-  ngOnChanges(changes: any) {
-    console.log('changes: ', changes);
-  }
-
   setProp(val: any) {
     console.log('val: ', val);
+    this.service.setProp({
+      [this.propToSet]: val
+    });
   }
 }

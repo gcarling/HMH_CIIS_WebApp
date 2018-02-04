@@ -23,4 +23,8 @@ export class HMHService {
     loadTest() {
       this.store$.dispatch(new HMHActions.LoadTest());
     }
+
+    setProp(payload) {
+      this.store$.dispatch(new HMHActions.SetFormProp(payload));
+    }
 }

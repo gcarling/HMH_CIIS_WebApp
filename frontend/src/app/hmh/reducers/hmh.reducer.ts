@@ -6,11 +6,16 @@ import { Map, List, Record } from 'immutable';
 import { HMHActionType } from '../hmh.actions';
 
 export function hmhReducer(state: HMHState = initialState, action: any): HMHState {
-  console.log(action);
   switch (action.type) {
     case HMHActionType.TEST_COMPLETE:
       return { ...state,
         testData: action.payload,
+      };
+
+    case HMHActionType.SET_FORM_PROP:
+      return {
+        ...state,
+        ...action.payload,
       };
 
     default:

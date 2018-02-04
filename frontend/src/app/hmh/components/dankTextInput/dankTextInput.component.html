@@ -1,4 +1,4 @@
 <div class="input-wrapper">
     <span class="label">{{label}}</span>
-    <input type="text" [(ngModel)]="textValue" />
+    <input type="text" [(ngModel)]="myValue" (ngModelChange)="setProp($event)" />
 </div>

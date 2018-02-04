@@ -18,9 +18,9 @@ export enum HMHActionType {
     constructor () {};
   }
 
-  export class SetFirstName implements Action {
+  export class SetFormProp implements Action {
     readonly type = HMHActionType.SET_FORM_PROP;
-    constructor () {};
+    constructor(public payload: any) {};
   }
 
       /**
